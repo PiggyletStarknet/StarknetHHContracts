@@ -1,0 +1,23 @@
+{
+    "destinationChainId": "5",
+    "fee": "0",
+    "data": {
+        "SN_GOERLI": {
+            "block:9932137": {
+                "accounts": {
+                    "0xd8da6bf26964af9d7eed9e03e53415d37aa96045": {
+                        "props": [
+                            "STORAGE_ROOT"
+                        ]
+                    }
+                }
+            }
+        }
+    },
+    "webhook": {
+        "url": "",
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}

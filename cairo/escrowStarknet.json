@@ -1,0 +1,153 @@
+[
+    {
+        "name": "esc",
+        "type": "impl",
+        "interface_name": "escrow::escrow::escs"
+    },
+    {
+        "name": "core::integer::u256",
+        "type": "struct",
+        "members": [
+            {
+                "name": "low",
+                "type": "core::integer::u128"
+            },
+            {
+                "name": "high",
+                "type": "core::integer::u128"
+            }
+        ]
+    },
+    {
+        "name": "escrow::escrow::escs",
+        "type": "interface",
+        "items": [
+            {
+                "name": "set_offer",
+                "type": "function",
+                "inputs": [
+                    {
+                        "name": "nftTokenId",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "time",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "apr",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "amount",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "paymentToken",
+                        "type": "core::starknet::contract_address::ContractAddress"
+                    },
+                    {
+                        "name": "borrower",
+                        "type": "core::starknet::contract_address::ContractAddress"
+                    },
+                    {
+                        "name": "liqPrice",
+                        "type": "core::integer::u256"
+                    },
+                    {
+                        "name": "ethNftAddressFirstHalf",
+                        "type": "core::felt252"
+                    },
+                    {
+                        "name": "ethNftAddressSecondHalf",
+                        "type": "core::felt252"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "name": "set_start",
+                "type": "function",
+                "inputs": [],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "name": "read_values",
+                "type": "function",
+                "inputs": [],
+                "outputs": [
+                    {
+                        "type": "(core::integer::u256, core::integer::u256, core::integer::u256, core::integer::u256)"
+                    }
+                ],
+                "state_mutability": "view"
+            },
+            {
+                "name": "read_addresses",
+                "type": "function",
+                "inputs": [],
+                "outputs": [
+                    {
+                        "type": "(core::starknet::contract_address::ContractAddress, core::starknet::contract_address::ContractAddress, core::starknet::contract_address::ContractAddress)"
+                    }
+                ],
+                "state_mutability": "view"
+            },
+            {
+                "name": "read_nft_contract_address",
+                "type": "function",
+                "inputs": [],
+                "outputs": [
+                    {
+                        "type": "(core::felt252, core::felt252)"
+                    }
+                ],
+                "state_mutability": "view"
+            },
+            {
+                "name": "pay",
+                "type": "function",
+                "inputs": [],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "name": "check_liquidate",
+                "type": "function",
+                "inputs": [
+                    {
+                        "name": "priceAtm",
+                        "type": "core::integer::u256"
+                    }
+                ],
+                "outputs": [],
+                "state_mutability": "external"
+            },
+            {
+                "name": "new",
+                "type": "function",
+                "inputs": [],
+                "outputs": [],
+                "state_mutability": "external"
+            }
+        ]
+    },
+    {
+        "name": "constructor",
+        "type": "constructor",
+        "inputs": [
+            {
+                "name": "init_owner",
+                "type": "core::starknet::contract_address::ContractAddress"
+            }
+        ]
+    },
+    {
+        "kind": "enum",
+        "name": "escrow::escrow::escrow::Event",
+        "type": "event",
+        "variants": []
+    }
+]
